@@ -17,7 +17,7 @@ namespace EventReminder.Application
         {
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(configuration => Assembly.GetExecutingAssembly());
 
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 

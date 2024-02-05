@@ -18,7 +18,7 @@ namespace EventReminder.BackgroundTasks
         /// <returns>The same service collection.</returns>
         public static IServiceCollection AddBackgroundTasks(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(configuration => Assembly.GetExecutingAssembly());
 
             services.Configure<BackgroundTaskSettings>(configuration.GetSection(BackgroundTaskSettings.SettingsKey));
 
