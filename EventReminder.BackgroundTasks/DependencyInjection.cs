@@ -2,7 +2,6 @@
 using EventReminder.BackgroundTasks.Services;
 using EventReminder.BackgroundTasks.Settings;
 using EventReminder.BackgroundTasks.Tasks;
-using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
